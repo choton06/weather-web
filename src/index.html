@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="bg-gray-100">
+    <header><h1>Weather Dashboard</h1></header>
+
+    <main>
+        <section>
+            <!-- searching by city and current location UI section -->
+            <h2>Enter a city name</h2>
+            <input type="text" id="text" placeholder="Enter city name">
+            <button id="searchBtn">Search </button>
+              <br>
+              or
+              <br>
+             <button id="currentLocationBtn">Use Current Location</button> 
+        </section>
+        <section id="weather-data">
+            <!-- Showing the current date weather update -->
+            <h3 id="location-name">London</h3>
+            <img  id="weather-icon" src="" alt="image">
+            <p id="location-temp">Temperature</p>
+            <p id="windSpeed">Wind</p>
+            <p id="humanidity">Humanidity</p>
+        </section>
+        <section id="extended-forecast">
+            <h2>5-Day Forecast</h2>
+             <div id="forecast-list"> list of days</div>
+        </section>
+    </main>
+ 
+
+  
+</body>
+</html>
