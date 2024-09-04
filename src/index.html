@@ -5,38 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather App</title>
-    <script src="app.js" defer></script>
     <link rel="stylesheet" href="output.css">
 </head>
 <body class="bg-gray-100">
-    <header><h1>Weather Dashboard</h1></header>
+    <div class="container mx-auto p-6">
+        <div class="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+            <h1 class="text-2xl font-bold text-center mb-4">Weather Forecast</h1>
+             
+            <!-- Search City Form -->
+            <div class="mb-4">
+                <input type="text" id="cityInput" class="w-full p-2 border border-gray-300 rounded" placeholder="Enter city name">
+                <button id="searchBtn" class="w-full mt-2 bg-blue-500 text-white p-2 rounded">Search Weather</button>
+            </div>
 
-    <main>
-        <section>
-            <!-- searching by city and current location UI section -->
-            <h2>Enter a city name</h2>
-            <input type="text" id="text" placeholder="Enter city name">
-            <button id="searchBtn">Search </button>
-              <br>
-              or
-              <br>
-             <button id="currentLocationBtn">Use Current Location</button> 
-        </section>
-        <section id="weather-data">
-            <!-- Showing the current date weather update -->
-            <h3 id="location-name">London</h3>
-            <img  id="weather-icon" src="" alt="image">
-            <p id="location-temp">Temperature</p>
-            <p id="windSpeed">Wind</p>
-            <p id="humanidity">Humanidity</p>
-        </section>
-        <section id="extended-forecast">
-            <h2>5-Day Forecast</h2>
-             <div id="forecast-list"> list of days</div>
-        </section>
-    </main>
- 
+            <!-- Location Button -->
+            <button id="currentLocationBtn" class="w-full bg-green-500 text-white p-2 rounded">Use Current Location</button>
+            
+            <!-- Weather Info -->
+            <div id="weatherData" class="mt-6 hidden">
+                <h2 id="locationName" class="text-xl font-bold"></h2>
+                <img id="weatherIcon" class="w-16 h-16 mx-auto mt-4" alt="Weather Icon">
+                <p id="temperature" class="text-lg font-bold"></p>
+                <p id="humidity" class="text-gray-600"></p>
+                <p id="windSpeed" class="text-gray-600"></p>
+            </div>
 
-  
+            <!-- Extended Forecast -->
+            <div id="extendedForecast" class="mt-6 hidden">
+                <h3 class="text-lg font-bold">5-Day Forecast</h3>
+                <div id="forecastList" class="grid grid-cols-2 gap-4 mt-4"></div>
+            </div>
+
+            <!-- Recent Searches Dropdown -->
+            <div id="recentSearchesContainer" class="mt-6 hidden">
+                <h3 class="text-lg font-bold">Recent Searches</h3>
+                <select id="recentSearchesDropdown" class="w-full p-2 border border-gray-300 rounded"></select>
+            </div>
+
+            <!-- Error Messages -->
+            <div id="errorMessage" class="text-red-500 mt-4 hidden"></div>
+        </div>
+        <h2 class="text-2xl font-bold text-center mb-4"><a href="https://github.com/choton06/weather-web" target="_blank" rel="noopener noreferrer">Github Link</a></h2>
+            
+    </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
